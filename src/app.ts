@@ -5,6 +5,8 @@ const app = express();
 
 import { router } from './routes';
 
+app.use(express.json());
+
 app.use(router);
 
 app.get("/github", (request, response) => {
